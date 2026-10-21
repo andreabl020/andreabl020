@@ -2,7 +2,7 @@
 
 <img src="assets/header.svg" alt="Tarjeta de perfil" width="100%" />
 
-<img src="assets/city.svg" alt="Ciudad 3D de contribuciones" width="100%" />
+<img src="assets/gato.svg" alt="Un gatito se come mis contribuciones" width="100%" />
 
 <img src="assets/stack.svg" alt="Lenguajes que más uso" width="100%" />
 
