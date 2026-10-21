@@ -1,16 +1,20 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**andreabl020/andreabl020** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<img src="assets/header.svg" alt="Tarjeta de perfil" width="100%" />
 
-Here are some ideas to get you started:
+<img src="assets/gato.svg" alt="Un gatito se come mis contribuciones" width="100%" />
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<img src="assets/stack.svg" alt="Lenguajes que más uso" width="100%" />
+
+</div>
+
+### 🚀 Proyectos destacados
+
+| Proyecto | Qué es | Stack |
+|---|---|---|
+| 🏎️ **Fantasy F1** | App web instalable para seguir la Fórmula 1 (calendario, resultados, mundiales) con un juego de fantasy y notificaciones push. | Next.js · React · Tailwind · Supabase · Vercel |
+| 🌊 **Flowly** | App móvil con API propia, tiempo real y reconocimiento de voz, con arquitectura por capas. | .NET MAUI · ASP.NET Core · EF Core · SignalR |
+| 🗓️ **Uplan** | App móvil de planificación con mapas, geolocalización y datos offline. | .NET MAUI · SQLite · Supabase |
+| 💇 **[Web de peluquería](https://andreabl020.github.io)** | Web para un salón: servicios, galería y reserva de cita. | HTML · CSS · JavaScript |
+
+<sub>Algunos proyectos son privados. Si quieres ver el código, ¡escríbeme!</sub>
