@@ -7,7 +7,6 @@ Uso:
 import datetime as dt
 import io
 import json
-import math
 import os
 import random
 import sys
@@ -214,21 +213,7 @@ def pixel_avatar(url, x, y, size, grid=46):
             dots.append(f'<circle cx="{x + (i + .5) * step:.1f}" cy="{y + (j + .5) * step:.1f}" '
                         f'r="{rad:.2f}" fill="#{red:02x}{g:02x}{b:02x}"/>')
     scan = (f'<rect class="scan" x="{x}" y="{y}" width="{size}" height="6" fill="{ACCENT}" opacity=".25"/>')
-    cx, cy, R = x + size / 2, y + size / 2, size / 2 + 6
-    ears = ""
-    for side in (-1, 1):
-        # Cada oreja es un triángulo apoyado en el aro, inclinado hacia fuera
-        a0, a1, tip = math.radians(-90 + side * 14), math.radians(-90 + side * 46), math.radians(-90 + side * 32)
-        p0 = (cx + R * math.cos(a0), cy + R * math.sin(a0))
-        p1 = (cx + R * math.cos(a1), cy + R * math.sin(a1))
-        pt = (cx + (R + 36) * math.cos(tip), cy + (R + 36) * math.sin(tip))
-        inner = [(cx + (R + 2) * math.cos(a0 + side * .08), cy + (R + 2) * math.sin(a0 + side * .08)),
-                 (cx + (R + 2) * math.cos(a1 - side * .08), cy + (R + 2) * math.sin(a1 - side * .08)),
-                 (cx + (R + 24) * math.cos(tip), cy + (R + 24) * math.sin(tip))]
-        pts = lambda ps: " ".join(f"{a:.1f},{b:.1f}" for a, b in ps)
-        ears += (f'<polygon points="{pts([p0, pt, p1])}" fill="#141d33" stroke="{ACCENT}" stroke-width="2" '
-                 f'stroke-linejoin="round"/><polygon points="{pts(inner)}" fill="#ff8fb1" opacity=".55"/>')
-    return (ears + f'<clipPath id="av"><circle cx="{x + size / 2}" cy="{y + size / 2}" r="{size / 2}"/></clipPath>'
+    return (f'<clipPath id="av"><circle cx="{x + size / 2}" cy="{y + size / 2}" r="{size / 2}"/></clipPath>'
             f'<g class="fade">{"".join(dots)}</g><g clip-path="url(#av)">{scan}</g>'
             f'<circle cx="{x + size / 2}" cy="{y + size / 2}" r="{size / 2 + 6}" fill="none" '
             f'stroke="{ACCENT}" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="3 6"/>')
